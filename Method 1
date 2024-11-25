@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+int i,j,r;                                          //declaring integer variables i,j for loops , r for number of rows
+printf("Enter the number of rows :\n");             //asking user for input
+scanf("%d",&r);                                     //saving number of rows in variable r
+for(i=0;i<r;i++)                                    //loop for number of rows
+   {
+      if(i==0 || i==r-1)                            //if condition to print first and last row
+         {
+            for(j=0;j<3;j++)                        //loop to print first and last row
+               {
+                  printf("3");                      //printing 3
+               }
+         }
+      else                                          //else to print rest of the square
+         {
+            for(j=0;j<3;j++)                        //loop to print the rest of the square
+              {
+                  if(j==0 || j==2)                  //if condition to print the outer values
+                     {
+                        printf("3");                //printing 3
+                     }
+                  else//else condition to
+                     {
+                        printf("%d",i);              //Printing the middle column
+                     }
+              }
+         }
+      printf("\n");                                  //printing newline
+   }
+}
